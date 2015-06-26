@@ -1,4 +1,4 @@
-# (Meta-toolkit)[https://meta-toolkit.org/] VM setup
+# [Meta-toolkit](https://meta-toolkit.org/) VM setup
 
 ## Requirements:
 - VirtualBox
