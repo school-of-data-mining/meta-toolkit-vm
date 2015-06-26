@@ -1,0 +1,25 @@
+---
+  - name: Install basics
+    apt:
+      update_cache=yes
+      name={{ item }}
+      state=latest
+    with_items:
+     - software-properties-common
+     - build-essential
+
+
+  - name: Add ppa for cmake
+    apt_repository:
+      update_cache=yes
+      repo=ppa:george-edison55/cmake-3.x
+
+  - name: Install dependecy packages
+    apt: 
+      name={{ item }}
+      force=yes
+      state=present
+    with_items:
+      - cmake 
+      - libicu-dev 
+      - git

@@ -1,0 +1,27 @@
+---
+  - name: Get source code
+    sudo: no
+    git: 
+      repo={{ meta_toolkit_repo }}
+      dest={{ meta_toolkit_src }}
+    register: gitclone
+
+
+  - name: prepare build dir
+    file: 
+      path={{ meta_toolkit_build }}
+      state=directory
+      mode=0755
+
+  - name: provide build conf
+    file:
+      path={{ meta_toolkit_build }}/config.toml
+      src={{ meta_toolkit_src }}/config.toml
+      state=link
+
+  - name: build
+    command: "{{ item }} chdir={{ meta_toolkit_build }}"
+    with_items:
+     - cmake {{ meta_toolkit_src }} -DCMAKE_BUILD_TYPE=Release
+     - make
+    when: gitclone.changed

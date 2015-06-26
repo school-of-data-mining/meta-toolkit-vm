@@ -1,0 +1,4 @@
+---
+meta_toolkit_repo: https://github.com/meta-toolkit/meta.git
+meta_toolkit_src: /opt/meta
+meta_toolkit_build: /opt/meta/build
