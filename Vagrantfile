@@ -1,6 +1,6 @@
 
 # map your host data to vm
-mount_path = { host: "/Volumes/LaCie/textmining/",
+mount_path = { host: "/Users/zavalit/textmining/",
 			 	 vm: "/opt"}
 
 

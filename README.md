@@ -14,7 +14,11 @@ First of all we clone this repo.
     mount_path = { host: "/your/host/path",
                       vm: "/your/vm/path"}
 
- 2. run *vagrant up* 
+ 2. run **vagrant up**  and you are done with VM. (but be patient it can take some time)
+
+ 3. to login in VM with **vagrant ssh** 
+
+ 4. you find meta-toolkit in an **/opt/meta** folder 
+
  
-and you are done with VM.
 
